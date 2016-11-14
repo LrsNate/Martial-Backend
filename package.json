@@ -4,7 +4,7 @@
   "description": "Backend for the martial apps",
   "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "node app.js"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,15 @@
   "bugs": {
     "url": "https://github.com/LrsNate/Martial-Backend/issues"
   },
-  "homepage": "https://github.com/LrsNate/Martial-Backend#readme"
+  "homepage": "https://github.com/LrsNate/Martial-Backend#readme",
+  "dependencies": {
+    "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "eslint": "^3.10.1",
+    "eslint-config-airbnb": "^13.0.0",
+    "eslint-plugin-import": "^2.2.0",
+    "eslint-plugin-jsx-a11y": "^2.2.3",
+    "eslint-plugin-react": "^6.7.0"
+  }
 }
