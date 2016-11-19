@@ -1,9 +1,11 @@
-const express = require('express');
-const redis = require('redis');
 const bluebird = require('bluebird');
+const cors = require('cors');
+const express = require('express');
 const moniker = require('moniker');
+const redis = require('redis');
 
 const app = express();
+app.use(cors());
 bluebird.promisifyAll(redis.RedisClient.prototype);
 
 function getRedisClient() {
