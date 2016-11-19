@@ -1,6 +1,7 @@
 const express = require('express');
 const redis = require('redis');
 const bluebird = require('bluebird');
+const moniker = require('moniker');
 
 const app = express();
 bluebird.promisifyAll(redis.RedisClient.prototype);
@@ -35,6 +36,10 @@ app.put('/works/version', (req, res) => {
   redisClient.set('key', body, () => {
     res.send(201);
   });
+});
+
+app.get('/random', (req, res) => {
+  res.send(moniker.choose());
 });
 
 app.listen(3000, () => {
